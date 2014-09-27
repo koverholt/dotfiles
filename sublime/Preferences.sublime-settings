@@ -1,0 +1,36 @@
+{
+	"auto_complete": false,
+	"auto_indent": true,
+	"close_windows_when_empty": true,
+	"color_scheme": "Packages/Tomorrow Color Schemes/Tomorrow-Night-Bright.tmTheme",
+	"detect_indentation": true,
+	"draw_indent_guides": false,
+	"draw_white_space": "none",
+	"find_selected_text": true,
+	"font_face": "Ubuntu Mono",
+	"font_size": 16.0,
+	"highlight_line": true,
+	"hot_exit": false,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"open_files_in_new_window": false,
+	"remember_open_files": false,
+	"rulers":
+	[
+		79,
+		132
+	],
+	"scroll_past_end": true,
+	"soda_classic_tabs": true,
+	"spell_check": false,
+	"tab_size": 4,
+	"theme": "Soda Dark.sublime-theme",
+	"translate_tabs_to_spaces": true,
+	"trim_automatic_white_space": true,
+	"trim_trailing_white_space_on_save": false,
+	"use_tab_stops": true,
+	"word_wrap": true
+}
+
