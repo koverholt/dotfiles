@@ -3,13 +3,6 @@ if [ -f ~/.bashrc ]; then
   . ~/.bashrc
 fi
 
-# Change tab names in Terminal
-function tabname {
-  printf "\e]1;$1\a"
-}
-hostname=`hostname -s`
-tabname "koverholt@$hostname"
-
 # Shell colors and prefix
 export CLICOLOR=1
 export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
