@@ -1,0 +1,6 @@
+[
+{ "keys": ["super+r"], "command": "build" },
+{ "keys": ["super+shift+forward_slash"], "command": "insert_snippet", "args": {"contents": "${TM_COMMENT_START/s*$//} ==${1/./=/g}==${TM_COMMENT_END/^s*(.+)/ $1/}\n${TM_COMMENT_START/s*$//} = ${1:Banner} =${TM_COMMENT_END/^s*(.+)/ $1/}\n${TM_COMMENT_START/s*$//} ==${1/./=/g}==${TM_COMMENT_END/^s*(.+)/ $1/}"}},
+{ "keys": ["super+b"], "command": "show_overlay", "args": {"overlay": "goto", "text": "@"}},
+{ "keys": ["super+shift+c"], "command": "exec", "args": {"kill": true}}
+]
