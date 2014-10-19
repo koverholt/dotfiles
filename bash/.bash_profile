@@ -35,7 +35,10 @@ alias cfast='$CFAST_SVN_ROOT/CFAST/intel_osx_64/cfast6_osx_64'
 # Text editor settings
 alias nano='nano -w'
 alias slime='subl -w'
-export EDITOR='slime'
+export EDITOR='subl -w'
+
+MKL_NUM_THREADS=1
+export MKL_NUM_THREADS
 
 # Path to Intel Fortran compiler
 export IFORT_COMPILER=/opt/intel/composerxe
