@@ -4,6 +4,13 @@
     "anaconda_linter_underlines": false,
     "pep8_ignore":
     [
-    "E501"
+    "E501",
+    ],
+    "pep257": true,
+    "pep257_ignore":
+    [
+    "D101",
+    "D102",
+    "D103",
     ],
 }
