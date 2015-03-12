@@ -19,6 +19,10 @@ alias st='svn status'
 alias svndel="svn status --no-ignore | grep '^[I?]' | cut -c 9-"
 alias svndely='svn status --no-ignore | grep "^[I?]" | cut -c 9- | while IFS= read -r f; do rm -rf "$f"; done'
 alias wn="svn status | grep -v '?'"
+alias gs='git status'
+alias gd='git diff'
+alias workon='source activate'
+alias workoff='source deactivate'
 
 # Text editor settings
 alias nano='nano -w'
