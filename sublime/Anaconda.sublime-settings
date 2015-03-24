@@ -2,6 +2,8 @@
     "anaconda_linting_behaviour": "load-save",
     "anaconda_linter_mark_style": "none",
     "anaconda_linter_underlines": false,
+    "enable_signatures_tooltip": false,
+    "enable_docstrings_tooltip": false,
     "pep8_ignore":
     [
         "E501",
