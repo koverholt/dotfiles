@@ -6,7 +6,7 @@ fi
 # Shell colors and prefix
 export CLICOLOR=1
 export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
-export PS1="[\u@openfire \W]$ "
+export PS1="[\[\033[36m\]\u\[\033[m\]@\[\033[32m\]openfire:\[\033[33;1m\]\W\[\033[m\]]\$ "
 
 # SSH aliases
 alias sshkov='ssh koverholt@koverholt.com'
