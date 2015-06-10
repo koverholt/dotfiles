@@ -21,6 +21,7 @@ alias svndely='svn status --no-ignore | grep "^[I?]" | cut -c 9- | while IFS= re
 alias wn="svn status | grep -v '?'"
 alias gs='git status'
 alias gd='git diff'
+alias gb='git branch'
 alias workon='source activate'
 alias workoff='source deactivate'
 
