@@ -3,10 +3,15 @@ if [ -f ~/.bashrc ]; then
   . ~/.bashrc
 fi
 
+# Git branch in prompt
+parse_git_branch() {
+git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
+
 # Shell colors and prefix
 export CLICOLOR=1
 export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
-export PS1="[\[\033[36m\]\u\[\033[m\]@\[\033[32m\]openfire:\[\033[33;1m\]\W\[\033[m\]]\$ "
+export PS1="[\[\033[36m\]\u\[\033[m\]@\[\033[32m\]openfire:\[\033[33;1m\]\W\[\033[m\]]\$(parse_git_branch)\$ "
 
 # SSH aliases
 alias sshkov='ssh koverholt@koverholt.com'
