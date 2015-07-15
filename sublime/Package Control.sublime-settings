@@ -2,7 +2,11 @@
 	"installed_packages":
 	[
 		"Anaconda",
-		"LaTeXTools",
+		"Git",
+		"GitGutter",
+		"Markdown Extended",
+		"OmniMarkupPreviewer",
+		"Package Control",
 		"Theme - Soda",
 		"Tomorrow Color Schemes"
 	]
