@@ -33,7 +33,6 @@ alias gs='git status'
 alias workon='source activate'
 alias workoff='source deactivate'
 
-
 # Text editor settings
 alias nano='nano -w'
 alias slime='subl -w'
