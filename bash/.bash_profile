@@ -39,11 +39,5 @@ alias nano='nano -w'
 alias slime='subl -w'
 export EDITOR='subl -w'
 
-MKL_NUM_THREADS=1
-export MKL_NUM_THREADS
-
-# Path to Intel Fortran compiler
-export IFORT_COMPILER=/opt/intel/composerxe
-
 # Anaconda Python
 export PATH="/Users/koverholt/anaconda/bin:$PATH"
