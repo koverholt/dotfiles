@@ -13,9 +13,6 @@ export CLICOLOR=1
 export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
 export PS1="[\[\033[36m\]\u\[\033[m\]@\[\033[32m\]openfire:\[\033[33;1m\]\W\[\033[m\]]\$(parse_git_branch)\$ "
 
-# SSH aliases
-alias sshkov='ssh koverholt@koverholt.com'
-
 # Command aliases
 alias top='top -u'
 alias u='svn up'
