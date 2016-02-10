@@ -26,6 +26,7 @@ alias gb='git branch'
 alias gc='git checkout'
 alias gd='git diff'
 alias gs='git status'
+alias gp='git pull'
 
 alias workon='source activate'
 alias workoff='source deactivate'
