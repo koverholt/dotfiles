@@ -37,4 +37,4 @@ alias slime='subl -w'
 export EDITOR='subl -w'
 
 # Anaconda Python
-export PATH="/Users/koverholt/anaconda/bin:$PATH"
+export PATH="/Users/koverholt/anaconda3/bin:$PATH"
