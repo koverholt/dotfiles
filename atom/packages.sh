@@ -1,0 +1,11 @@
+apm install atom-fix-path
+apm install autocomplete-python
+apm install git-plus
+apm install language-fortran
+apm install language-markdown
+apm install language-restructuredtext
+apm install language-salt
+apm install linter
+apm install linter-pylint
+apm install rst-preview-pandoc
+apm install script

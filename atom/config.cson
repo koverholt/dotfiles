@@ -1,0 +1,39 @@
+"*":
+  "autocomplete-plus":
+    maxVisibleSuggestions: 5
+  "autocomplete-python": {}
+  autosave: {}
+  core:
+    disabledPackages: [
+      "language-gfm"
+    ]
+    themes: [
+      "atom-dark-ui"
+      "base16-tomorrow-dark-theme"
+    ]
+  editor:
+    fontFamily: "Ubuntu Mono"
+    fontSize: 16
+    invisibles: {}
+    lineHeight: 1.1
+    scrollPastEnd: true
+    showIndentGuide: true
+    softWrap: true
+    tabLength: 4
+  "exception-reporting":
+    userId: "47839393-aed6-cc8d-a2af-f9782e515170"
+  "git-diff":
+    showIconsInEditorGutter: true
+  "git-plus": {}
+  linter:
+    errorPanelHeight: 22
+  "linter-pep8": {}
+  "linter-pylint": {}
+  "markdown-preview":
+    useGitHubStyle: true
+  "one-dark-ui": {}
+  "rst-preview-pandoc":
+    pandocOpts: "-frst -thtml --webtex"
+  welcome:
+    showOnStartup: false
+
