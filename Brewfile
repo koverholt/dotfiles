@@ -1,0 +1,21 @@
+brew 'wget'
+brew 'git'
+brew 'docker'
+brew 'docker-machine'
+brew 'docker-compose'
+
+tap 'caskroom/cask'
+tap 'caskroom/versions'
+
+brew 'caskroom/cask/brew-cask'
+cask 'google-chrome'
+cask 'dashlane'
+cask 'vlc'
+cask 'transmission'
+cask 'clipmenu'
+cask 'iterm2'
+cask 'java'
+cask 'atom'
+cask 'vagrant'
+cask 'virtualbox'
+

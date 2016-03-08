@@ -30,11 +30,20 @@ alias gp='git pull'
 
 alias workon='source activate'
 alias workoff='source deactivate'
+alias clus='workon cluster'
+
+dockerenv() {
+   eval $(docker-machine env)
+}
+dockerstopall() {
+   docker stop $(docker ps -a -q)
+}
+dockerrmall() {
+   docker rm $(docker ps -a -q)
+}
 
 # Text editor settings
 alias nano='nano -w'
-alias slime='subl -w'
-export EDITOR='subl -w'
 
 # Anaconda Python
 export PATH="/Users/koverholt/anaconda3/bin:$PATH"
