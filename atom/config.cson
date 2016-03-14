@@ -1,5 +1,6 @@
 "*":
   "autocomplete-plus":
+    confirmCompletion: "tab"
     maxVisibleSuggestions: 5
   "autocomplete-python": {}
   autosave: {}
@@ -34,6 +35,16 @@
   "one-dark-ui": {}
   "rst-preview-pandoc":
     pandocOpts: "-frst -thtml --webtex"
+  "spell-check":
+    grammars: [
+      "source.asciidoc"
+      "source.gfm"
+      "text.git-commit"
+      "text.plain"
+      "text.plain.null-grammar"
+      "source.python"
+      "text.restructuredtext source.gfm.restructuredtext"
+      "text.md"
+    ]
   welcome:
     showOnStartup: false
-
