@@ -1,0 +1,29 @@
+adam:
+  title: 'adam'
+  paths: [
+    '/Users/koverholt/Repos/adam'
+  ]
+
+'anaconda-cluster':
+  title: 'anaconda-cluster'
+  paths: [
+    '/Users/koverholt/Repos/anaconda-cluster'
+    '/Users/koverholt/.acluster'
+  ]
+
+dask:
+  title: 'dask'
+  paths: [
+    '/Users/koverholt/Repos/dask'
+    '/Users/koverholt/Repos/distributed'
+    '/Users/koverholt/Repos/hdfs3'
+    '/Users/koverholt/Repos/knit'
+    '/Users/koverholt/Repos/dec2'
+  ]
+
+
+dotfiles:
+  title: 'dotfiles'
+  paths: [
+    '/Users/koverholt/Repos/dotfiles'
+  ]
