@@ -3,6 +3,9 @@ if [ -f ~/.bashrc ]; then
   . ~/.bashrc
 fi
 
+# Allow i-search
+stty -ixon
+
 # Git branch in prompt
 parse_git_branch() {
 git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
