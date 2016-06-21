@@ -17,13 +17,7 @@ export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
 export PS1="[\[\033[36m\]\u\[\033[m\]@\[\033[32m\]openfire:\[\033[33;1m\]\W\[\033[m\]]\$(parse_git_branch)\$ "
 
 # Command aliases
-alias top='top -u'
-alias u='svn up'
-alias sd='svn diff --diff-cmd colordiff'
-alias st='svn status'
-alias svndel="svn status --no-ignore | grep '^[I?]' | cut -c 9-"
-alias svndely='svn status --no-ignore | grep "^[I?]" | cut -c 9- | while IFS= read -r f; do rm -rf "$f"; done'
-alias wn="svn status | grep -v '?'"
+alias jn='jupyter notebook'
 
 alias gb='git branch'
 alias gc='git checkout'
@@ -35,14 +29,14 @@ alias workon='source activate'
 alias workoff='source deactivate'
 alias clus='workon cluster'
 
-dockerenv() {
-   eval $(docker-machine env)
-}
 dockerstopall() {
    docker stop $(docker ps -a -q)
 }
 dockerrmall() {
    docker rm $(docker ps -a -q)
+}
+dockerrmiall() {
+   docker rmi -f $(docker images -q)
 }
 
 # Text editor settings

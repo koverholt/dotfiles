@@ -1,8 +1,6 @@
 brew 'wget'
 brew 'git'
 brew 'docker'
-brew 'docker-machine'
-brew 'docker-compose'
 
 tap 'caskroom/cask'
 tap 'caskroom/versions'
@@ -18,4 +16,3 @@ cask 'java'
 cask 'atom'
 cask 'vagrant'
 cask 'virtualbox'
-
