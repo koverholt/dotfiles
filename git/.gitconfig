@@ -1,17 +1,9 @@
-[filter "hawser"]
-	clean = git hawser clean %f
-	smudge = git hawser smudge %f
-	required = true
 [user]
-	name = Kristopher Overholt
-	email = ...
-[push]
-	default = current
+    name = Kristopher Overholt
+    email = ...
 [core]
-	editor = nano
-[filter "lfs"]
-	clean = git lfs clean %f
-	smudge = git lfs smudge %f
-	required = true
+    editor = nano -w
+[push]
+    default = current
 [credential]
-	helper = osxkeychain
+    helper = osxkeychain
