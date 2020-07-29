@@ -203,10 +203,6 @@ autoload -U compinit && compinit -u
 # export AWS_SECRET_ACCESS_KEY=$(read_aws_credentials_key default aws_secret_access_key)
 # export AWS_DEFAULT_REGION=$(read_aws_credentials_key default region)
 
-# export AWS_ACCESS_KEY_ID=$(read_aws_credentials_key sol-eng-eks aws_access_key_id)
-# export AWS_SECRET_ACCESS_KEY=$(read_aws_credentials_key sol-eng-eks aws_secret_access_key)
-# export AWS_DEFAULT_REGION=$(read_aws_credentials_key sol-eng-eks region)
-
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/Users/koverholt/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
