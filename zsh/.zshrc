@@ -81,13 +81,13 @@ source $ZSH/oh-my-zsh.sh
 # user@hostname in prompt
 prompt_context() {
   if [[ "$USER" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
-    prompt_segment black default "%(!.%{%F{yellow}%}.)%n@algorithmia"
+    prompt_segment black default "%(!.%{%F{yellow}%}.)kris@org"
   fi
 }
 
 # Dir: current working directory only in prompt
 prompt_dir() {
-  prompt_segment 81 $CURRENT_FG '%c'
+  prompt_segment 249 $CURRENT_FG '%c'
 }
 
 # Git: branch/detached head, dirty status in prompt
@@ -142,11 +142,11 @@ prompt_git() {
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR='nano'
+else
+  export EDITOR='nano'
+fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -162,6 +162,7 @@ alias gc='git checkout'
 alias gd='git diff'
 alias gs='git status'
 alias gp='git pull'
+alias hs='hugo serve'
 
 alias workon='conda activate'
 alias workoff='conda deactivate'
@@ -186,19 +187,19 @@ autoload -U compinit && compinit -u
 # Homebrew
 # export PATH=/usr/local/bin:$PATH
 
-# AWS Credentials as ENV VARs
-# function read_aws_credentials_key {
-#   FILE=~/.aws/credentials
-#   if [ -f $FILE ]; then
-#     section=$1
-#     key=$2
-#     awk -F ' *= *' '{ if ($1 ~ /^\[/) section=$1; else if ($1 !~ /^$/) print $1 section "=" $2 }' $FILE | grep "$2\[$1\]" | sed 's/.*=//'
-#   fi
-# }
+# AWS Credentials as env vars
+function read_aws_credentials_key {
+  FILE=~/.aws/credentials
+  if [ -f $FILE ]; then
+    section=$1
+    key=$2
+    awk -F ' *= *' '{ if ($1 ~ /^\[/) section=$1; else if ($1 !~ /^$/) print $1 section "=" $2 }' $FILE | grep "$2\[$1\]" | sed 's/.*=//'
+  fi
+}
 
-# export AWS_ACCESS_KEY_ID=$(read_aws_credentials_key default aws_access_key_id)
-# export AWS_SECRET_ACCESS_KEY=$(read_aws_credentials_key default aws_secret_access_key)
-# export AWS_DEFAULT_REGION=$(read_aws_credentials_key default region)
+export AWS_ACCESS_KEY_ID=$(read_aws_credentials_key default aws_access_key_id)
+export AWS_SECRET_ACCESS_KEY=$(read_aws_credentials_key default aws_secret_access_key)
+export AWS_DEFAULT_REGION=$(read_aws_credentials_key default region)
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!

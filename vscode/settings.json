@@ -1,0 +1,31 @@
+{
+    "terminal.integrated.inheritEnv": false,
+    "editor.fontSize": 14,
+    "window.zoomLevel": 0,
+    "editor.minimap.enabled": false,
+    "breadcrumbs.enabled": false,
+    "editor.largeFileOptimizations": false,
+    "git.enableSmartCommit": true,
+    "workbench.iconTheme": "material-icon-theme",
+    "jupyter.alwaysTrustNotebooks": true,
+    "editor.rulers": [
+        80
+    ],
+    "files.trimTrailingWhitespace": true,
+    "python.showStartPage": false,
+    "editor.quickSuggestions": {
+        "other": false,
+        "comments": false,
+        "strings": false
+    },
+    "files.trimFinalNewlines": true,
+    "explorer.confirmDelete": false,
+    "files.insertFinalNewline": true,
+    "explorer.confirmDragAndDrop": false,
+    "jupyter.useNotebookEditor": false,
+    "python.defaultInterpreterPath": "~/miniconda3/bin/python",
+    "reflowMarkdown.wrapLongLinks": "doNotWrap",
+    "settingsSync.ignoredExtensions": [
+
+    ],
+}
