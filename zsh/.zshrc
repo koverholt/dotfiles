@@ -31,7 +31,7 @@ precmd() { print "" }
 # DISABLE_AUTO_UPDATE="true"
 
 # Uncomment the following line to automatically update without prompting.
-# DISABLE_UPDATE_PROMPT="true"
+DISABLE_UPDATE_PROMPT="true"
 
 # Uncomment the following line to change how often to auto-update (in days).
 # export UPDATE_ZSH_DAYS=13
@@ -72,7 +72,7 @@ precmd() { print "" }
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(ansible docker git terraform)
+plugins=(ansible git terraform)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -81,7 +81,7 @@ source $ZSH/oh-my-zsh.sh
 # user@hostname in prompt
 prompt_context() {
   if [[ "$USER" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
-    prompt_segment black default "%(!.%{%F{yellow}%}.)kris@org"
+    prompt_segment black default "%(!.%{%F{yellow}%}.)kris@google"
   fi
 }
 
@@ -161,6 +161,7 @@ alias gb='git branch'
 alias gc='git checkout'
 alias gd='git diff'
 alias gs='git status'
+alias gcp='git commit -am "Update" && git push'
 alias gp='git pull'
 alias hs='hugo serve'
 
@@ -184,34 +185,49 @@ alias nano='nano -w'
 [[ -s /Users/koverholt/.autojump/etc/profile.d/autojump.sh ]] && source /Users/koverholt/.autojump/etc/profile.d/autojump.sh
 autoload -U compinit && compinit -u
 
-# Homebrew
-# export PATH=/usr/local/bin:$PATH
+export GOOGLE_APPLICATION_CREDENTIALS=~/.config/gcloud/koverholt-devrel-355716-5bdf12a147ce.json
+# export GOOGLE_APPLICATION_CREDENTIALS=~/.config/gcloud/koverholt-dev-9bae64bed885.json
+# export GOOGLE_APPLICATION_CREDENTIALS=~/.config/gcloud/koverholt-apps-304316-603012d57c0e.json
+# export GOOGLE_APPLICATION_CREDENTIALS=~/.config/gcloud/next-2024-demo-bd6b3906801a.json
 
-# AWS Credentials as env vars
-function read_aws_credentials_key {
-  FILE=~/.aws/credentials
-  if [ -f $FILE ]; then
-    section=$1
-    key=$2
-    awk -F ' *= *' '{ if ($1 ~ /^\[/) section=$1; else if ($1 !~ /^$/) print $1 section "=" $2 }' $FILE | grep "$2\[$1\]" | sed 's/.*=//'
-  fi
-}
+export VERTEXAI_PROJECT=koverholt-devrel-355716
+# export VERTEXAI_PROJECT=koverholt-dev
+export VERTEXAI_LOCATION=us-central1
+# export VERTEXAI_LOCATION=us-east5
 
-export AWS_ACCESS_KEY_ID=$(read_aws_credentials_key default aws_access_key_id)
-export AWS_SECRET_ACCESS_KEY=$(read_aws_credentials_key default aws_secret_access_key)
-export AWS_DEFAULT_REGION=$(read_aws_credentials_key default region)
+export API_KEY=123
+export GEMINI_API_KEY=123
+export GOOGLE_API_KEY=123
+export GITHUB_TOKEN=123
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/koverholt/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+__conda_setup="$('/Users/koverholt/miniforge3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/Users/koverholt/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/Users/koverholt/miniconda3/etc/profile.d/conda.sh"
+    if [ -f "/Users/koverholt/miniforge3/etc/profile.d/conda.sh" ]; then
+        . "/Users/koverholt/miniforge3/etc/profile.d/conda.sh"
     else
-        export PATH="/Users/koverholt/miniconda3/bin:$PATH"
+        export PATH="/Users/koverholt/miniforge3/bin:$PATH"
     fi
 fi
 unset __conda_setup
+
+if [ -f "/Users/koverholt/miniforge3/etc/profile.d/mamba.sh" ]; then
+    . "/Users/koverholt/miniforge3/etc/profile.d/mamba.sh"
+fi
 # <<< conda initialize <<<
+
+export NVM_DIR="$HOME/.nvm"
+  [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/koverholt/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/koverholt/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/koverholt/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/koverholt/google-cloud-sdk/completion.zsh.inc'; fi
+
+# Added by Antigravity
+export PATH="/Users/koverholt/.antigravity/antigravity/bin:$PATH"
